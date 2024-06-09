@@ -1,0 +1,7 @@
+[build]
+  publish = "echo 'No build step required'git add" # Replace "build" with your actual build directory
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
