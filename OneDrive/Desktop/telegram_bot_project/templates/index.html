@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Tap to Earn $MXA</h1>
+<button id="tapButton">Tap</button>
+<p id="tapMessage">You have tapped {{ taps }} times.</p>
+<script>
+    document.getElementById("tapButton").onclick = function() {
+        fetch('/tap', {method: 'POST'})
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("tapMessage").innerText = "You have tapped " + data.taps + " times.";
+        });
+    };
+</script>
+{% endblock %}

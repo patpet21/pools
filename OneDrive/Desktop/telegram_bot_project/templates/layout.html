@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Tap</a>
+        <a href="{{ url_for('tasks') }}">Tasks</a>
+        <a href="{{ url_for('farm') }}">Farm</a>
+        <a href="{{ url_for('invite') }}">Invite Friends</a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
